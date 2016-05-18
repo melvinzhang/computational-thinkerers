@@ -1,4 +1,6 @@
-# Computational Thinkerers at Maker Faire Singapore 2016
+# Computational Thinkerers at Maker Faire SG 2016
+
+## Exhibit description
 
 Computational Thinkerer is a mash-up of computational thinking and tinkering.
 Computational Thinking is increasingly called the fourth R, in tandem with the
