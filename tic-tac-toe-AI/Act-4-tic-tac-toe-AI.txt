@@ -1,0 +1,63 @@
+Focus:
+  Following a set of rules
+  Testing
+  Iterative improvement
+
+Summary:
+This activity lets participants develop their own Tic-Tac-Toe AI without
+writing any code. 
+
+The AI is a rule-based system with the following rules:
+1. If I have two in a row/column/diagonal, fill in a third to win!
+2. If opponent has two in row/column/diagonal, fill in a third to block.
+3. Otherwise fill in the first empty position according to my priority.
+eg   2 7 3
+     6 1 8
+     5 9 4
+  
+   Try to place in the center (1) if available.
+   Try to place in the top left corner (2) if available.
+   ...
+   Try to place in the bottom middle (9) if available.
+
+Technical terms:
+artificial intelligence
+rule-based system
+game playing
+
+Materials:
+A form for the participant with the rules and an empty tic-tac-toe board for
+the participant to fill in their preference.
+
+An empty tic-tac-toe board to play test the AI created. 
+
+Tokens to represent X and O so the same board can be used multiple times.
+
+What to do:
+1. Explain the rules to the participant. Play a game using a sample AI with
+the participant. The demonstrator explaining how the AI works during the game.
+
+2. Ask the participant to fill in a form to create their own AI.
+
+3. Play against the participant, asking the participant to play the role of
+the AI. Make sure they understand how the rule-based system.
+
+4. Ask the participant to defeat their AI. The demonstrator plays using the
+participant's AI against the participant. Explain the concept of testing and
+how it is used in software development.
+
+5. Ask the participant to make an improvement to their AI by changing the
+form.
+
+6. Explain that to test the AI comprehensively would take a lot of time if
+done manually. To save time, we developed a program that plays all possible
+games against their AI automatically.
+
+7. Use the program to evaluate their AI and give them the score.
+
+Variation and extensions:
+Q: Can an AI playing first never lose to a human player?
+A: Yes! We found an example of such an AI.
+
+Q: Can you find the only way to defeat [[2 6 8] [5 9 1] [3 4 7]] when it plays first?
+A: Anticpate its next move and block it.
