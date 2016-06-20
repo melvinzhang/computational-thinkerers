@@ -12,8 +12,10 @@
   % And the actual line
   \makebox[#1]{\hrulefill}}
 
-\title{Finding your Flip / Checking your IC number\vspace{-2cm}}
-%\author{Melvin Zhang} 
+\title{Computational Thinkerer Workshop\footnote{held at Think tank 13: 25th June 2:45pm to 4:15pm and 26th June 4:30pm to 6:00pm}\\
+Finding your Flip / Checking your IC number
+\vspace{-2cm}}
+%\author{Melvin Zhang}
 \date{}
 
 \begin{document}
@@ -24,11 +26,11 @@
   \Blank{Date:}
 \end{flushright}
 
-\SetupExSheets[question]{skip-below=1.5\baselineskip}
+General notes.
 
 \section{Finding your Flip}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.   Saepe ab Aristotele,
-a Theophrasto mirabiliter est laudata per se ipsa rerum scientia.  
+a Theophrasto mirabiliter est laudata per se ipsa rerum scientia.
 
 \begin{question}
 Lorem Ipsum
@@ -38,16 +40,46 @@ Lorem Ipsum
 Lorem Ipsum
 \end{question}
 
+\newpage
 \section{Checking your IC number}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.   Saepe ab Aristotele,
-a Theophrasto mirabiliter est laudata per se ipsa rerum scientia.  
+Ever wondered what is the significance of the letter at the end of your NIRC/FIN
+number? It serves the same purpose as the extra bits we added in
+``Finding your Flip''.
 
-\begin{question}
-Lorem Ipsum
+This checksum letter allows anyone reading your IC number to check
+whether it is a valid number by comparing the digits of your number against the
+letter. If the two do not match, it means there is an error somewhere.
+
+Suppose your IC number starts with T\textbf{ABCDEFG}
+\begin{enumerate}
+    \item sum $= 2 * A + 7 * B + 6 * C + 5 * D + 4 * E + 3 * F + 2 * G$
+    \item find the remainder when sum is divided by 11
+    \item Convert the remainder into a letter using the following table
+\end{enumerate}
+
+\begin{question}[skip-below=0\baselineskip]
+Compute the check letter for the following NRIC numbers:
+\begin{itemize}
+    \item S0000001I (Yusof bin Ishak, first President of Singapore)
+    \item S0000002G (Wee Chong Jin, first Chief Justice of Singapore)
+    \item S0000003E (Lee Kuan Yew, first Prime Minister of Singapore)
+    \item S0000004C (Kwa Geok Choo, wife of Lee Kuan Yew)
+    \item S0000005A (Toh Chin Chye, first Deputy Prime Minister of Singapore)
+    \item S0000006Z (Goh Keng Swee, second Deputy Prime Minister of Singapore)
+    \item S0000007H (S Rajaratnam, first Minister for Culture)
+\end{itemize}
+\end{question}
+\begin{solution}
+I, G, E, C, A, Z, H
+\end{solution}
+
+\begin{question}[skip-below=3\baselineskip]
+Compute the check letter for your NRIC/FIN number.
 \end{question}
 
-\begin{question}
-Lorem Ipsum
+\begin{question}[skip-below=3\baselineskip]
+Ask your partner for his/her NRIC/FIN number without the letter, then compute
+the check letter and see if you can get it right.
 \end{question}
 
 \end{document}
