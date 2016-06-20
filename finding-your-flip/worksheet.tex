@@ -26,19 +26,34 @@ Finding your Flip / Checking your IC number
   \Blank{Date:}
 \end{flushright}
 
-General notes.
+Digital information is stored and transmitted as bits, a series of
+zeros and ones. Sometimes one or more bits may be flipped due to noise or damage
+to the media. How can we detect and fix such errors?
 
 \section{Finding your Flip}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.   Saepe ab Aristotele,
-a Theophrasto mirabiliter est laudata per se ipsa rerum scientia.
+In this magic trick, we ask the audience to introduce an ``error'' and then fix
+it without knowing where is the error.
+\begin{enumerate}
+    \item Ask your partner to setup a 5x5 grid of black and white stones.
+    \item Add an additional column and row to make it 6x6.
+    \item With your back turned, have your partner change one of the stones.
+    \item Turn around and magically point out the stone that has just been flipped.
+\end{enumerate}
 
-\begin{question}
-Lorem Ipsum
+\begin{question}[skip-below=3\baselineskip]
+How can we figure out which stone was changed? Hint: the additional
+column and row is important!
 \end{question}
 
-\begin{question}
-Lorem Ipsum
+\begin{question}[skip-below=3\baselineskip]
+Practice the trick in pairs.
 \end{question}
+
+\begin{question}[skip-below=3\baselineskip]
+What happens if two or more cards are flipped? Is it possible to always detect
+that an error has occurred?
+\end{question}
+
 
 \newpage
 \section{Checking your IC number}
@@ -46,7 +61,7 @@ Ever wondered what is the significance of the letter at the end of your NIRC/FIN
 number? It serves the same purpose as the extra bits we added in
 ``Finding your Flip''.
 
-This checksum letter allows anyone reading your IC number to check
+This letter allows anyone reading your IC number to check
 whether it is a valid number by comparing the digits of your number against the
 letter. If the two do not match, it means there is an error somewhere.
 
@@ -66,15 +81,15 @@ Suppose your IC number starts with T\textbf{ABCDEFG}
 
 
 \begin{question}[skip-below=0\baselineskip]
-Compute the check letter for the following NRIC numbers:
+Compute the letter for the following NRIC numbers:
 \begin{itemize}
-    \item S0000001I (Yusof bin Ishak, first President of Singapore)
-    \item S0000002G (Wee Chong Jin, first Chief Justice of Singapore)
-    \item S0000003E (Lee Kuan Yew, first Prime Minister of Singapore)
-    \item S0000004C (Kwa Geok Choo, wife of Lee Kuan Yew)
-    \item S0000005A (Toh Chin Chye, first Deputy Prime Minister of Singapore)
-    \item S0000006Z (Goh Keng Swee, second Deputy Prime Minister of Singapore)
-    \item S0000007H (S Rajaratnam, first Minister for Culture)
+    \item S0000001? (Yusof bin Ishak, first President of Singapore)
+    \item S0000002? (Wee Chong Jin, first Chief Justice of Singapore)
+    \item S0000003? (Lee Kuan Yew, first Prime Minister of Singapore)
+    \item S0000004? (Kwa Geok Choo, wife of Lee Kuan Yew)
+    \item S0000005? (Toh Chin Chye, first Deputy Prime Minister of Singapore)
+    \item S0000006? (Goh Keng Swee, second Deputy Prime Minister of Singapore)
+    \item S0000007? (S Rajaratnam, first Minister for Culture)
 \end{itemize}
 \end{question}
 \begin{solution}
@@ -82,12 +97,25 @@ I, G, E, C, A, Z, H
 \end{solution}
 
 \begin{question}[skip-below=3\baselineskip]
-Compute the check letter for your NRIC/FIN number.
+Compute the letter for your NRIC/FIN number. Ask your partner for
+his/her NRIC/FIN number without the letter, then compute
+the letter and see if you can get it right.
 \end{question}
 
 \begin{question}[skip-below=3\baselineskip]
-Ask your partner for his/her NRIC/FIN number without the letter, then compute
-the check letter and see if you can get it right.
+If we change only a single number, is it possible to get back the same letter?
 \end{question}
+
+\begin{solution}
+No.
+\end{solution}
+
+\begin{question}[skip-below=3\baselineskip]
+If we are allowed to change \emph{two} digits, is it possible to get back the letter?
+\end{question}
+
+\begin{solution}
+Yes. For example, swapping the first and last digit.
+\end{solution}
 
 \end{document}
