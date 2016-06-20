@@ -53,9 +53,17 @@ letter. If the two do not match, it means there is an error somewhere.
 Suppose your IC number starts with T\textbf{ABCDEFG}
 \begin{enumerate}
     \item sum $= 2 * A + 7 * B + 6 * C + 5 * D + 4 * E + 3 * F + 2 * G$
-    \item find the remainder when sum is divided by 11
+    \item Add 4 to sum if your IC number starts with T or G
+    \item Find the remainder when sum is divided by 11
     \item Convert the remainder into a letter using the following table
 \end{enumerate}
+
+\begin{tabular}{r||ccccccccccc}
+    remainder     & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+    letter (NRIC) & J & Z & I & H & G & F & E & D & C & B & A  \\
+    letter (FIN)  & X & W & U & T & R & Q & P & N & M & L & K
+\end{tabular}
+
 
 \begin{question}[skip-below=0\baselineskip]
 Compute the check letter for the following NRIC numbers:
