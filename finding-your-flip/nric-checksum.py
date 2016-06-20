@@ -1,3 +1,5 @@
+import copy
+
 # reference: http://www.ngiam.net/NRIC/NRIC_numbers.pdf
 
 # algorithm for S series checksum
@@ -56,6 +58,18 @@ def successor(digits):
     else:
         return True
 
-curr = [0, 0, 0, 0, 0, 0 ,0]
-while successor(curr):
-    print check_letter(curr), curr
+def find_collision(digits, letter):
+    for i in xrange(0,7):
+        test = copy.copy(digits)
+        for d in xrange(0,10):
+            if d != digits[i]:
+                test[i] = d
+                if check_letter(test) == letter:
+                    print test, digits, letter
+
+def enumerate():
+    curr = [0, 0, 0, 0, 0, 0 ,0]
+    while successor(curr):
+        print check_letter(curr), curr
+
+enumerate()
