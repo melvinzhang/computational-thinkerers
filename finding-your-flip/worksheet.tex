@@ -65,12 +65,19 @@ This letter allows anyone reading your IC number to check
 whether it is a valid number by comparing the digits of your number against the
 letter. If the two do not match, it means there is an error somewhere.
 
-Suppose your IC number starts with T\textbf{ABCDEFG}
+Suppose your IC number starts with S\emph{ABCDEFG}, where $A$ is the first
+digit, $B$ is the second digit and so on.
 \begin{enumerate}
-    \item sum $= 2 * A + 7 * B + 6 * C + 5 * D + 4 * E + 3 * F + 2 * G$
-    \item Add 4 to sum if your IC number starts with T or G
-    \item Find the remainder when sum is divided by 11
-    \item Convert the remainder into a letter using the following table
+    \item sum $= (2 \times A) +
+                 (7 \times B) +
+                 (6 \times C) +
+                 (5 \times D) +
+                 (4 \times E) +
+                 (3 \times F) +
+                 (2 \times G)$
+    \item Add 4 to sum if your IC number starts with T or G.
+    \item Find the remainder when sum is divided by 11.
+    \item Convert the remainder into a letter using the following table.
 \end{enumerate}
 
 \begin{tabular}{r||ccccccccccc}
