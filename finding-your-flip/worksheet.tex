@@ -12,13 +12,15 @@
   % And the actual line
   \makebox[#1]{\hrulefill}}
 
+\ifdefined\withsolution
+    \SetupExSheets{solution/print=true,no-skip-below=true}
+\fi
+
 \title{Computational Thinkerer Workshop\footnote{held at Think tank 13: 25th June 2:45pm to 4:15pm and 26th June 4:30pm to 6:00pm}\\
 Finding your Flip / Checking your IC number
 \vspace{-2cm}}
 %\author{Melvin Zhang}
 \date{}
-
-%\SetupExSheets{solution/print=true,no-skip-below=true}
 
 \begin{document}
 \maketitle
