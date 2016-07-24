@@ -1,0 +1,47 @@
+The participant arranges a 4x4 grid of black and white squares. Then point to
+a position as the secret.
+
+Assistant 1 may flip one square on the board from white to black or black to
+white.
+
+Assistant 2 looks at the resulting board and figures out where is the secret
+position.
+
+Assistant 1 can be replaced with a program. Same is true for any trick that
+requires Assistant 1 to encode information, eg. the Magic Card Trick
+
+Solution:
+The parity of the board is a 4bit number by considering the following
+partitions:
+O X O X
+O X O X
+O X O X
+O X O X
+
+O O X X
+O O X X
+O O X X
+O O X X
+
+O O O O
+X X X X
+O O O O
+X X X X
+
+O O O O
+O O O O
+X X X X
+X X X X
+
+We can communicate the secret location by encoding it in the board parity.
+initial board parity xor position to flip = secret position
+initial board parity xor secret position = position to flip
+
+initial board parity xor secret position can be computed in one step by
+determining the board parity after flipping the secret position.
+
+Assistant 2 computes the parity of the board and interprets that as a board
+position.
+
+Refernces:
+  http://datagenetics.com/blog/december12014/index.html
