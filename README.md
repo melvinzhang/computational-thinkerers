@@ -1,4 +1,4 @@
-# Computational Thinkerers at Maker Faire SG 2016
+# Computational Thinkerers at Maker Faire SG 2017
 
 ## Exhibit description
 
