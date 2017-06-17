@@ -1,6 +1,6 @@
-# Computational Thinkerers at Maker Faire SG 2017
+# Computational Thinkerers at Maker Faire SG 2017, Singpore Science Centre, Hall A
 
-## Exhibit description
+## Who are Computational Thinkerers?
 
 Computational Thinkerer is a mash-up of computational thinking and tinkering.
 Computational Thinking is increasingly called the fourth R, in tandem with the
@@ -8,7 +8,8 @@ current 3R (Reading, wRiting, and aRithmetic). Experience CT through a series
 of FUN tinkering activities, including: (a) Bill Gates and Pancake Flipping,
 (b) Reading your Mind with MatheMAGIC, and (c) Finding your Flip Magic.
 
-## Workshop on Computational Thinking: A Gentle Introduction to CS
+## Workshop on Computational Thinking: A Gentle Introduction to CT
+### July 23 (Sunday), 12.45 to 2.15pm
 
 Computational Thinking has been said to be the fourth R, in
 tandem with the current 3R (Reading, wRiting, and aRithmetic).
