@@ -32,19 +32,20 @@ things in our lives.
 "Come with an open mind and a questioning attitude."
 
 ## Past appearances
-### Makers' Block 2014
-Demonstrated the Magic card trick
+
+### Maker Faire 2017
+Ran a booth and workshop on the second day. Activities include 1) Reading your mind, 2) Finding your flip, 3) Travelling your town, and 4) Sorting network
+
+### Maker Faire 2016
+Ran a booth and workshop on both days. Activities include 1) Reading your mind, 2) Finding your flip, and 3) Bill Gates and Pancake flipping
+
+### Maker Faire 2015
+Ran a booth with two activities, 1) Reading your Mind 2) Making your own Tic-Tac-Toe AI
 
 ### Fun with Computing without Computers
 Held on 18th March 2015 at the Singpore Science Center, Scientists for a Day
 
 Demonstrated four unplugged activities
 
-### Maker Faire 2015
-Ran a booth with two activities, 1) Reading your Mind 2) Making your own Tic-Tac-Toe AI
-
-### Maker Faire 2016
-Ran a booth and workshop on both days. Activities include 1) Reading your mind, 2) Finding your flip, and 3) Bill Gates and Pancake flipping
-
-### Maker Faire 2017
-Ran a booth and workshop on the second day. Activities include 1) Reading your mind, 2) Finding your flip, 3) Travelling your town, and 4) Sorting network
+### Makers' Block 2014
+Demonstrated the Magic card trick
