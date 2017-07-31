@@ -1,4 +1,4 @@
-# Computational Thinkerers at Maker Faire SG 2017, Singpore Science Centre, Hall A
+# Computational Thinkerers at Maker Faire Singapore 2017, Singpore Science Centre, Hall A
 
 ## Who are Computational Thinkerers?
 
@@ -33,13 +33,13 @@ things in our lives.
 
 ## Past appearances
 
-### Maker Faire 2017
+### Maker Faire Singapore 2017
 Ran a booth and workshop on the second day. Activities include 1) Reading your mind, 2) Finding your flip, 3) Travelling your town, and 4) Sorting network
 
-### Maker Faire 2016
+### Maker Faire Singapore 2016
 Ran a booth and workshop on both days. Activities include 1) Reading your mind, 2) Finding your flip, and 3) Bill Gates and Pancake flipping
 
-### Maker Faire 2015
+### Maker Faire Singapore 2015
 Ran a booth with two activities, 1) Reading your Mind 2) Making your own Tic-Tac-Toe AI
 
 ### Fun with Computing without Computers
