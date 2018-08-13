@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amsfonts, amsmath}
+\usepackage{exsheets}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+
+\newcommand\Blank[2][.33\linewidth]{%
+  % add strut to allow for handwriting
+  \rule{0pt}{4ex}%
+  % Prompt
+  #2\enspace
+  % And the actual line
+  \makebox[#1]{\hrulefill}}
+
+\ifdefined\withsolution
+    \SetupExSheets{solution/print=true,no-skip-below=true}
+\fi
+
+\title{Computational Thinkerer Workshop\\
+Flexing your Hexahexaflexagon
+\vspace{-2cm}}
+%\author{Melvin Zhang}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{flushright}
+  \Blank{Name:}
+
+  \Blank{Date:}
+\end{flushright}
+
+% flexagon graph: draw the hexagon graph
+% extension: ???, find out more
+
+Your hexahexaflexagon (HHF) is a paper model which can be flexed
+endlessly. It is called a hexahexaflexagon because its shape is a hexagon and it
+has six different faces you can find by flexing it.
+
+It turns out when we draw lines on these faces, there is actually more than six
+different faces! To explore the HHF systematically, we will make use of a graph.
+
+\let\thefootnote\relax\footnote{Solution available at \texttt{http://melvinzh.sdf.org/2-FYH-worksheet-soln.pdf}}
+
+% bridging: graphs in everyday, MRT map.  
+\section*{Example of a graph}
+% figure of part of MRT map
+\begin{center}
+\includegraphics[scale=0.5]{mrt-graph}
+
+Figure 1: An example of a graph for a section of the MRT network.   
+\end{center}
+
+A graph consist of \emph{nodes} and \emph{edges}. In Figure 1, the nodes are the
+MRT stations and the edges are the railway lines connecting the stations.
+Although Tampines is on two different lines, it is considered a single node.  
+
+\begin{question}[skip-below=3\baselineskip]
+How many nodes and edges are in Figure 1?
+\end{question}
+\begin{solution}
+There are 6 nodes and 5 edges in Figure 1. 
+\end{solution}
+
+\newpage
+\let\thefootnote\relax\footnote{Inspired by \texttt{http://www.cs4fn.org/hexahexaflexagon/}}
+\section*{Mapping your hexahexaflexagon}
+For your HHF, the nodes are the faces and the edges are the flexing actions.
+
+Your objective is to construct a graph of your HHF and find out how many
+different faces it has. Remember that each face is one node and each flex is one
+edge.
+
+\begin{question}[skip-below=20\baselineskip]
+Draw the graph for your HHF.
+\end{question}
+\begin{solution}
+
+\end{solution}
+
+\begin{question}[skip-below=3\baselineskip]
+How many different faces does a HHF have?
+\end{question}
+\begin{solution}
+There are 9 possible faces.  
+\end{solution}
+
+\begin{question}[skip-below=3\baselineskip]
+How many ways can you flex a HHF? Hint: It is the number of edges in the graph.  
+\end{question}
+\begin{solution}
+There are 12 ways.
+\end{solution}
+
+\end{document}
