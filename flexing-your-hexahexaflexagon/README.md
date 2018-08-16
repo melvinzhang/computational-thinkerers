@@ -10,8 +10,10 @@ h = 10.5
 a = 12.1
 
 The small version for everyone to make
-h = 2.5
-a = 2.9
+h = 2.3
+a = 2.66
+
+One A4 sheet of width 210mm makes 9 strips.
 
 Materials
 =========
@@ -24,7 +26,7 @@ Large version
 
 Small version
   white 100gsm paper
-  cut into 2.5cm strips
+  cut into 2.3cm strips
 
 Markers to draw on the small version
 
