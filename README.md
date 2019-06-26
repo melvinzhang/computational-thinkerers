@@ -1,8 +1,9 @@
-# Computational Thinkerers at Maker Faire Singapore 2018
+# Computational Thinkerers at Singapore Maker Extravaganza 2019
 
-http://singapore.makerfaire.com/
+https://www.science.edu.sg/whats-on/singapore-maker-extravaganza
 
-Our Tampines Hub (Community Auditorium) Fri to Sun, Aug 17-19, 2018
+Annexe Halls 1 - 3, Science Centre Singapore, 18 to 20 October 2019
+
 
 ## Who are Computational Thinkerers?
 
@@ -13,7 +14,7 @@ of FUN tinkering activities, including: (a) Bill Gates and Pancake Flipping,
 (b) Reading your Mind with MatheMAGIC, and (c) Finding your Flip Magic.
 
 ## Workshop on Computational Thinking: A Gentle Introduction to CT
-### August 19 (Sunday), 1pm to 2:30pm
+### Time/venue to be confirmed
 
 Computational Thinking has been said to be the fourth R, in
 tandem with the current 3R (Reading, wRiting, and aRithmetic).
@@ -36,6 +37,9 @@ things in our lives.
 "Come with an open mind and a questioning attitude."
 
 ## Past appearances
+
+### Maker Faire Singapore 2018
+Ran a booth and workshop on the second day. Activities include 1) Reading your mind, 2) Flexing your hexahexaflexagon, 3) Tiling your balcony
 
 ### Maker Faire Singapore 2017
 Ran a booth and workshop on the second day. Activities include 1) Reading your mind, 2) Finding your flip, 3) Travelling your town, and 4) Sorting network
