@@ -11,6 +11,8 @@ cut off the excess bits with scissors
 left one blank, number 1,2,3, 1,2,3 until the last one
 flip over, start number 4,4,5,5,6,6, least the last one blank
 
+start from the side with 1,2,3 and blank triangle on your left, tip of blank triangle facing down
+
 fold 4 to 4, 5 to 5, 6 to 6, so on
 
 fold 2 to 2, 2 to 2, leaving all the same number on one side
