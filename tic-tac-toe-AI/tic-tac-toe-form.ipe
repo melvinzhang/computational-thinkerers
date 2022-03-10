@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
-<ipe version="70005" creator="Ipe 7.1.4">
-<info created="D:20150315213413" modified="D:20150709225705"/>
+<ipe version="70206" creator="Ipe 7.2.9">
+<info created="D:20150315213413" modified="D:20220310091230"/>
 <preamble>\renewcommand{\familydefault}{\sfdefault}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
@@ -263,6 +263,6 @@ h
 </path>
 </group>
 <text matrix="1 0 0 1 -15.0951 53.1016" transformations="translations" pos="47.7911 29.672" stroke="black" type="minipage" width="164.694" height="11.093" depth="6.12" valign="top" size="Huge">Your Name:</text>
-<text matrix="1 0 0 1 -240 -64" transformations="translations" pos="272 96" stroke="black" type="label" width="483.639" height="11.951" depth="3.83" valign="baseline" size="LARGE">Find out how well your AI does at \texttt{http://melvinzh.sdf.org/ttt/}</text>
+<text matrix="1 0 0 1 -240 -64" transformations="translations" pos="272 96" stroke="black" type="label" width="554.51" height="11.951" depth="3.83" valign="baseline" size="LARGE">Find out how well your AI does at \texttt{https://melvinzhang.keybase.pub/ttt/}</text>
 </page>
 </ipe>
