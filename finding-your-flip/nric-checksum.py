@@ -65,11 +65,11 @@ def find_collision(digits, letter):
             if d != digits[i]:
                 test[i] = d
                 if check_letter(test) == letter:
-                    print test, digits, letter
+                    print(test, digits, letter)
 
 def enumerate():
     curr = [0, 0, 0, 0, 0, 0 ,0]
     while successor(curr):
-        print check_letter(curr), curr
+        print(check_letter(curr), curr)
 
 enumerate()
