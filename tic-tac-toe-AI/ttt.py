@@ -138,10 +138,48 @@ def test():
     show(b)
     print(winner(b))
 
-def testsim():
-    cnt = {'X':0, 'O':0, None:0}
-    sim(init(), simple, cnt)
+def sim(ai, ai_sym):
+    cnt = {'win':0, 'lose':0, 'draw':0}
+    sim_r(init(), ai, ai_sym, 'X', cnt)
+    return cnt
+
+def win2res(w, sym):
+    if w is None:
+        return 'draw'
+    elif w == sym:
+        return 'win'
+    elif w == other(sym):
+        return 'lose'
+    else:
+        assert False
+
+def sim_r(board, ai, ai_sym, sym, cnt):
+    ms = moves(board, ai, sym)
+    if sym == ai_sym:
+        ms = [ms[0]]
+    for m in ms:
+        board[m] = sym
+        w = winner(board)
+        if w is False:
+            sim_r(board, ai, ai_sym, other(sym), cnt)
+        else:
+            cnt[win2res(w, ai_sym)] += 1
+        board[m] = ' '
+
+def stats(ai):
+    return {'first': sim(ai, 'X'), 'second': sim(ai, 'O')}
+
+def sim_all():
+    stats = {}
+    for p in permutations(tuple(simple)):
+        sim(p, 'X')
+        stats[p] = cnt
+        print(p, cnt)
+    print(stats)
+
+def sim_one():
+    cnt = stats(simple)
     print(cnt)
-            
+
 if __name__ == "__main__":
-    repeat()
+    sim_one()
