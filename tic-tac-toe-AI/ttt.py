@@ -23,11 +23,11 @@ def countl(line, sym):
 def lines(board):
     lines = []
     for x in vs:
-        lines.append([(board[(x, y)], (x,y)) for y in vs])
+        lines.append([(board[(x, y)], (x, y)) for y in vs])
     for y in vs:
-        lines.append([(board[(x, y)], (x,y)) for x in vs])
-    lines.append([(board[(x, x)], (x,x)) for x in vs])
-    lines.append([(board[(x, y)], (x,y)) for x, y in zip(vs, reversed(vs))])
+        lines.append([(board[(x, y)], (x, y)) for x in vs])
+    lines.append([(board[(x, y)], (x, y)) for x, y in zip(vs, vs)])
+    lines.append([(board[(x, y)], (x, y)) for x, y in zip(vs, reversed(vs))])
     return lines
 
 def valid(board):
@@ -168,12 +168,12 @@ def tournament():
     
 def test():
     b = init() | {(-1,0): 'X', (1,0): 'X'}
-    move1(b, simple, 'O')
-    show(b)
+    assert move1(b, simple, 'O') == (0, 0)
     b = init()
     play(b, [simple, simple])
-    show(b)
-    print(winner(b))
+    assert b == {(-1, -1): 'X', (-1, 0): 'O', (-1, 1): 'X', (0, -1): 'O', (0, 0): 'X', (0, 1): ' ', (1, -1): 'X', (1, 0): ' ', (1, 1): 'O'}
+    assert winner(b) == 'X'
+    assert stats(simple) == {'first': {'win': 6, 'lose': 7, 'draw': 23}, 'second': {'win': 31, 'lose': 67, 'draw': 151}}
 
 def sim(ai, ai_sym):
     cnt = {'win':0, 'lose':0, 'draw':0}
@@ -217,10 +217,6 @@ def winners():
     won, _ = restore()
     for p in won:
         print(pos2perm(p), stats(p))
-
-def sim_one():
-    cnt = stats(simple)
-    print(cnt)
 
 if __name__ == "__main__":
     name = sys.argv[1]
