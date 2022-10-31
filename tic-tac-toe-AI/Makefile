@@ -5,3 +5,9 @@ all:
 	pdftk A=tic-tac-toe-form.pdf B=tic-tac-toe-opp-nup.pdf cat A1 B1west output tic-tac-toe-form-2.pdf
 	pdfjam --landscape --nup 2x1 tic-tac-toe-form-2.pdf --outfile tic-tac-toe-worksheet.pdf
 
+tournament:
+	python3 ttt.py $@
+
+winners:
+	python3 ttt.py $@ > $@.out
+

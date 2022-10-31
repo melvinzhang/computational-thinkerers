@@ -3,6 +3,7 @@ from collections import Counter
 import random
 import pickle
 import os
+import sys
 
 vs = [-1,0,1]
 
@@ -120,7 +121,7 @@ def show(board):
             print('\n------')
 
 def rand_ai(won, lost):
-    if len(lost) > (1000 + len(won) * 1000): 
+    if len(lost) > len(won) * 1000:
         return random.choice(tuple(won))
     p = tuple(random.sample(simple, k=len(simple)))
     while p in lost:
@@ -141,17 +142,14 @@ def save(won, lost):
         pickle.dump({'won': won, 'lost': lost}, f)
     os.replace('temp.pkl', 'progress.pkl')
 
-def outcome(w, l, won, lost, lostc):
+def outcome(w, l, won, lost):
     won.add(w)
-    lostc[l] += 1
-    if lostc[l] >= 1:
-        won.discard(l)
-        lost.add(l)
+    won.discard(l)
+    lost.add(l)
 
 # single elimination until less than 30 left
 # save progress after every 1000 matches
 def tournament():
-    lostc = Counter()
     won, lost = restore()
     for i in range(1000001):
         if i % 1000 == 0:
@@ -163,7 +161,7 @@ def tournament():
         if r == 1:
             p, q = q, p
         if r != 0:
-            outcome(p, q, won, lost, lostc)
+            outcome(p, q, won, lost)
         if len(lost) > 200000 and len(won) < 30:
             save(won, lost)
             break
@@ -225,4 +223,5 @@ def sim_one():
     print(cnt)
 
 if __name__ == "__main__":
-    winners()
+    name = sys.argv[1]
+    locals()[name]()
