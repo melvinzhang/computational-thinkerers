@@ -11,3 +11,5 @@ tournament:
 winners:
 	python3 ttt.py $@ > $@.out
 
+test:
+	python3 ttt.py $@

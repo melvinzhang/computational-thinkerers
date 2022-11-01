@@ -1,4 +1,4 @@
-from itertools import permutations 
+import itertools
 from collections import Counter
 import random
 import pickle
@@ -121,7 +121,7 @@ def show(board):
             print('\n------')
 
 def rand_ai(won, lost):
-    if len(lost) > len(won) * 1000:
+    if len(lost) > len(won) * 500:
         return random.choice(tuple(won))
     p = tuple(random.sample(simple, k=len(simple)))
     while p in lost:
@@ -151,17 +151,17 @@ def outcome(w, l, won, lost):
 # save progress after every 1000 matches
 def tournament():
     won, lost = restore()
-    for i in range(1000001):
+    for i in itertools.count():
         if i % 1000 == 0:
             print(len(won), len(lost), len(won)+len(lost))
             save(won, lost)
         p = rand_ai(won, lost)
         q = rand_ai(won, lost)
-        r = comp(p, q)
-        if r == 1:
-            p, q = q, p
-        if r != 0:
+        r = comp(p, q) - comp(q, p)
+        if r <= -1:
             outcome(p, q, won, lost)
+        elif r >= 1:
+            outcome(q, p, won, lost)
         if len(lost) > 200000 and len(won) < 30:
             save(won, lost)
             break
@@ -174,6 +174,7 @@ def test():
     assert b == {(-1, -1): 'X', (-1, 0): 'O', (-1, 1): 'X', (0, -1): 'O', (0, 0): 'X', (0, 1): ' ', (1, -1): 'X', (1, 0): ' ', (1, 1): 'O'}
     assert winner(b) == 'X'
     assert stats(simple) == {'first': {'win': 6, 'lose': 7, 'draw': 23}, 'second': {'win': 31, 'lose': 67, 'draw': 151}}
+    assert stats((perm2pos([6, 3, 7, 2, 8, 4, 9, 5, 1]))) == {'first': {'win': 62, 'lose': 1, 'draw': 66}, 'second': {'win': 30, 'lose': 48, 'draw': 307}}
 
 def sim(ai, ai_sym):
     cnt = {'win':0, 'lose':0, 'draw':0}
@@ -207,16 +208,27 @@ def stats(ai):
     return {'first': sim(ai, 'X'), 'second': sim(ai, 'O')}
 
 def pos2perm(rules):
-    perm = list(range(9))
+    perm = [None] * 9
     for i, p in enumerate(rules):
         j = simple.index(p)
         perm[j] = i+1
     return perm
 
+def perm2pos(perm):
+    pos = [None] * 9
+    for i, p in enumerate(perm):
+        pos[p - 1] = simple[i]
+    return pos
+
 def winners():
+    seen = set()
     won, _ = restore()
     for p in won:
-        print(pos2perm(p), stats(p))
+        st = stats(p)
+        rep = repr(st)
+        if rep not in seen:
+            seen.add(rep)
+            print(pos2perm(p), st)
 
 if __name__ == "__main__":
     name = sys.argv[1]
