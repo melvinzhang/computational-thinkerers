@@ -58,10 +58,11 @@ def successor(digits):
     else:
         return True
 
-def find_collision(digits, letter):
-    for i in xrange(0,7):
+def find_collision(digits):
+    letter = check_letter(digits)
+    for i in range(0,7):
         test = copy.copy(digits)
-        for d in xrange(0,10):
+        for d in range(0,10):
             if d != digits[i]:
                 test[i] = d
                 if check_letter(test) == letter:
