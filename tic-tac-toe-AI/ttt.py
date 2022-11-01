@@ -148,7 +148,7 @@ def tournament():
         elif r >= 1:
             rest[px] = rest[-1]
             rest.pop()
-        if len(rest) < 430:
+        if len(rest) < 500:
             save(rest)
             break
 
