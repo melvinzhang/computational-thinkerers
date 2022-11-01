@@ -121,12 +121,12 @@ def show(board):
             print('\n------')
 
 def rand_ai(won, lost):
-    if len(lost) > len(won) * 500:
-        return random.choice(tuple(won))
     p = tuple(random.sample(simple, k=len(simple)))
-    while p in lost:
+    c = 1
+    while p in lost and c < 10:
         p = tuple(random.sample(simple, k=len(simple)))
-    return p
+        c += 1
+    return p if c < 10 else random.choice(tuple(won))
 
 def restore():
     if not os.path.exists('progress.pkl'):
