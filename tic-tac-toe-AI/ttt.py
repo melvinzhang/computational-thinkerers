@@ -120,52 +120,38 @@ def show(board):
         else:
             print('\n------')
 
-def rand_ai(won, lost):
-    p = tuple(random.sample(simple, k=len(simple)))
-    c = 1
-    while p in lost and c < 10:
-        p = tuple(random.sample(simple, k=len(simple)))
-        c += 1
-    return p if c < 10 else random.choice(tuple(won))
-
 def restore():
     if not os.path.exists('progress.pkl'):
-        return set(), set()
+        return list(itertools.permutations(simple))
     with open('progress.pkl', 'rb') as f:
-        rec = pickle.load(f)
-        lost = rec['lost']
-        won = rec['won']
-    return won, lost
+        return pickle.load(f)
 
-def save(won, lost):
+def save(rest):
     with open('temp.pkl', 'wb') as f:
-        pickle.dump({'won': won, 'lost': lost}, f)
+        pickle.dump(rest, f)
     os.replace('temp.pkl', 'progress.pkl')
-
-def outcome(w, l, won, lost):
-    won.add(w)
-    won.discard(l)
-    lost.add(l)
 
 # single elimination until less than 30 left
 # save progress after every 1000 matches
 def tournament():
-    won, lost = restore()
+    rest = restore()
     for i in itertools.count():
         if i % 1000 == 0:
-            print(len(won), len(lost), len(won)+len(lost))
-            save(won, lost)
-        p = rand_ai(won, lost)
-        q = rand_ai(won, lost)
+            print(len(rest))
+            save(rest)
+        px, qx = random.sample(range(len(rest)), k=2)
+        p, q = rest[px], rest[qx]
         r = comp(p, q) - comp(q, p)
         if r <= -1:
-            outcome(p, q, won, lost)
+            rest[qx] = rest[-1]
+            rest.pop()
         elif r >= 1:
-            outcome(q, p, won, lost)
-        if len(lost) > 200000 and len(won) < 30:
-            save(won, lost)
+            rest[px] = rest[-1]
+            rest.pop()
+        if len(rest) < 430:
+            save(rest)
             break
-    
+
 def test():
     b = init() | {(-1,0): 'X', (1,0): 'X'}
     assert move1(b, simple, 'O') == (0, 0)
@@ -222,8 +208,8 @@ def perm2pos(perm):
 
 def winners():
     seen = set()
-    won, _ = restore()
-    for p in won:
+    rest = restore()
+    for p in rest:
         st = stats(p)
         rep = repr(st)
         if rep not in seen:
