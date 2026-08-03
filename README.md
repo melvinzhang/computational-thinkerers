@@ -1,8 +1,4 @@
-# Computational Thinkerers at 8th National Day Ground-up Party
-
-Sign up at https://luma.com/p5q3eivg
-
-The POD @ National Library Board, 2nd August 2026
+# Computational Thinkerers
 
 ## Who are Computational Thinkerers?
 
@@ -14,17 +10,20 @@ of FUN tinkering activities, including: (a) Bill Gates and Pancake Flipping,
 
 ## Past appearances
 
+### 8th National Day Ground-Up Party 2026
+Ran a booth. Activities include 1) Reading your mind, 2) Flexing your hexahexaflexagon, 3) Tiling your balcony
+
 ### Maker Faire Singapore 2019
-Ran a booth and workshop on the second day. Activities include 1) Reading your mind, 2) Flexing your hexahexaflexagon, 3) Tiling your balcony
+Ran a booth and workshop. Activities include 1) Reading your mind, 2) Flexing your hexahexaflexagon, 3) Tiling your balcony
 
 ### Maker Faire Singapore 2018
-Ran a booth and workshop on the second day. Activities include 1) Reading your mind, 2) Flexing your hexahexaflexagon, 3) Tiling your balcony
+Ran a booth and workshop. Activities include 1) Reading your mind, 2) Flexing your hexahexaflexagon, 3) Tiling your balcony
 
 ### Maker Faire Singapore 2017
-Ran a booth and workshop on the second day. Activities include 1) Reading your mind, 2) Finding your flip, 3) Travelling your town, and 4) Sorting network
+Ran a booth and workshop. Activities include 1) Reading your mind, 2) Finding your flip, 3) Travelling your town, and 4) Sorting network
 
 ### Maker Faire Singapore 2016
-Ran a booth and workshop on both days. Activities include 1) Reading your mind, 2) Finding your flip, and 3) Bill Gates and Pancake flipping
+Ran a booth and workshop. Activities include 1) Reading your mind, 2) Finding your flip, and 3) Bill Gates and Pancake flipping
 
 ### Maker Faire Singapore 2015
 Ran a booth with two activities, 1) Reading your Mind 2) Making your own Tic-Tac-Toe AI
@@ -58,4 +57,3 @@ link to real-life problem solving in computer science and everyday
 things in our lives.
 
 "Come with an open mind and a questioning attitude."
-
